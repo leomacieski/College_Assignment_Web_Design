@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS link-->
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+    <!--favicon-->
+    <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon"/>
+    
+    <title>Leo's Macieski Portfolio</title>
+</head>
+    <body>
+        <!--banner-->
+        <img src="img/banner_home.jpg" class="banner" alt="Responsive image"> 
+                                                            <!--some inline styling-->
+        <div class="textbanner"><a href="index.html"> <h1><span style="color: #008FBD;">L</span>eo <span style="color: #008FBD;">M</span>acieski</h1>
+            <h5>Graphic <span style="color: #008FBD;">and</span> Web Design</h5></a>
+        </div>
+        <!--menu-->
+        <div class="menu">
+            <ul>
+                <li> <a href="index.html">HOME</a> </li>
+                <li><a href="about.html">ABOUT</a> </li>
+                <li><a href="jobs.html">JOBS + SKILLS</a> </li>
+                <li><a href="contact.html">CONTACT</a> </li>
+            </ul>
+        </div>
+        
+        <br> <br>
+
+        <h1>Skills</h1>
+        <div class="barra"></div>
+
+        <table class="skills">
+            <tr>
+                <th>Portuguese</th>
+                <th>Adobe Illustrator</th>
+                <th>Adobe Dreamweaver</th>
+            </tr>
+
+            <tr>
+                <!--inline css style-->
+                <td style="background-color: #008FBD;">Native</td>
+                <td style="background-color: #008FBD;">Advanced</td>
+                <td style="background-color: #008FBD;">Basic</td>
+            </tr>
+
+            <tr>
+                <th>English</th>
+                <th>Adobe Photoshop</th>
+                <th>HTML/CSS</th>
+            </tr>
+            
+            <tr>
+                <!--inline css style-->
+                <td style="background-color: #008FBD;">Advanced</td>
+                <td style="background-color: #008FBD;">Intermediate</td>
+                <td style="background-color: #008FBD;">Intermediate</td>
+            </tr>
+
+            <tr>
+                <th>Spanish</th>
+                <th>Adobe Indesign</th>
+                <th>JavaScript</th>
+            </tr>
+            
+            <tr>
+                <!--inline css style-->
+                <td style="background-color: #008FBD;">Basic</td>
+                <td style="background-color: #008FBD;">Intermediate</td>
+                <td style="background-color: #008FBD;">Basic</td>
+            </tr>
+        </table>
+
+        <br> <br>
+
+        <div class="barra"></div>
+            <h1 style="margin-left: 880px;">Jobs</h1>
+        <div class="barra"></div>
+        <br>
+        
+        <table class="job3">
+            <tr>
+                <th>
+                    <!--the carousel and the java code I got from W3Schools (https://www.w3schools.com/w3css/w3css_slideshow.asp)-->
+                    <img class="slide3" src="img/gungadinlogo.png" alt="gungadinlogo">
+                    <img class="slide3" src="img/gungadincard.png" alt="gungadincard">
+                    <img class="slide3" src="img/gungadinletter.png" alt="gungadinletter">
+                    <img class="slide3" src="img/gungadincalendar.png" alt="gungadincalendar">
+                        
+                        <button class="btnleft" onclick="slide3(-1)">&#10094;</button>
+                        <button class="btnright" onclick="slide3(1)">&#10095;</button>
+                    <!--everytime when I putted the script in a separate file won't work so I left it here-->
+                    <!--script for the first carousel-->
+                    <script>
+                        var slideIndex = 1;
+                        showDivs3(slideIndex);
+                        
+                        function slide3(n) {
+                            showDivs3(slideIndex += n);
+                        }
+
+                        function showDivs3(n) {
+                            var i;
+                            var x = document.getElementsByClassName("slide3");
+                            if (n > x.length) {slideIndex = 1}
+                            if (n < 1) {slideIndex = x.length}
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";  
+                            }
+                            
+                            x[slideIndex-1].style.display = "block";  
+                        }
+                    </script>
+                </th>
+
+                <td> <h3>Gungadin Transportes </h3>
+                    <p>Work done for the college for a fictitious transport company where the objective was the 
+                        creation of the logo for the company and the expedient material (business card, envelope, letterhead) 
+                        and some extra material using the colors and items of the brand.</p>
+                </td>
+            </tr>
+        </table>
+
+        <br> <br> <br>
+        
+        <table class="job1">
+            <tr>
+                <td> <h3>Doce Sonho </h3>
+                    <p>Business card created for an autonomous confectioner that produces sweets for 
+                        private parties, special dates and small business events.</p>
+                </td>
+            
+                <th>
+                    <!--the carousel and the java code I got from W3Schools (https://www.w3schools.com/w3css/w3css_slideshow.asp)-->
+                    <img class="slide1" src="img/logodoce.jpg" alt="logodoce">
+                    <img class="slide1" src="img/aplicacaosonho.jpg" alt="aplicacaosonho">
+                    <img class="slide1" src="img/cartaosonho.jpg" alt="cartaosonho">
+                    <img class="slide1" src="img/finalsonho.jpg" alt="finalsonho">
+                        
+                        <button class="btnleft" onclick="slide1(-1)">&#10094;</button>
+                        <button class="btnright" onclick="slide1(1)">&#10095;</button>
+                    <!--script for the second carousel-->
+                    <script>
+                        var slideIndex1 = 1;
+                        showDivs1(slideIndex1);
+                    
+                        function slide1(n) {
+                            showDivs1(slideIndex1 += n);
+                        }
+
+                        function showDivs1(n) {
+                            var i;
+                            var x = document.getElementsByClassName("slide1");
+                            if (n > x.length) {slideIndex1 = 1}
+                            if (n < 1) {slideIndex1 = x.length}
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";  
+                            }
+
+                        x[slideIndex1-1].style.display = "block";  
+                        }
+                    </script>
+                </th>
+            </tr>
+        </table>
+        
+        <br> <br> <br>
+
+        <table class="job2">
+            <tr>
+                <th>
+                    <!--the carousel and the java code I got from W3Schools (https://www.w3schools.com/w3css/w3css_slideshow.asp)-->
+                    <img class="slide2" src="img/embalagemfora.jpg" alt="outsidepack">
+                    <img class="slide2" src="img/embalagemdentro.jpg" alt="insidepack">
+                    <img class="slide2" src="img/mock1.jpg" alt="mock1">
+                    <img class="slide2" src="img/mock2.jpg" alt="mock2">
+                        
+                        <button class="btnleft" onclick="slide2(-1)">&#10094;</button>
+                        <button class="btnright" onclick="slide2(1)">&#10095;</button>
+                    <!--script for the third carousel-->
+                    <script>
+                        var slideIndex = 1;
+                        showDivs2(slideIndex);
+                        
+                        function slide2(n) {
+                            showDivs2(slideIndex += n);
+                        }
+
+                        function showDivs2(n) {
+                            var i;
+                            var x = document.getElementsByClassName("slide2");
+                            if (n > x.length) {slideIndex = 1}
+                            if (n < 1) {slideIndex = x.length}
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";  
+                            }
+                            
+                            x[slideIndex-1].style.display = "block";  
+                        }
+                    </script>
+                </th>
+
+                <td> <h3>Amigurumis Packaging </h3>
+                    <p>Work for the college where the goal was to develop a package for someone who would make a 
+                        product. You can redo the packaging or create a new one.
+                        I developed a package for a craftswoman who makes stuffed animals in crochet, as 
+                        the product is used by children, inside the box I made a setting for the child to play.</p>
+                </td>
+            </tr>
+        </table>
+
+        <br> <br>
+
+        <div class="rodape"></div>
+
+    </body>
+
+    <script src="javascrip/java.js"></script>
+</html>
